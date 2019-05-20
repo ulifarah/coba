@@ -1,0 +1,834 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/isi knn/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Isi knn - Material for MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apa-itu-k-nearest-neighbour" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Material for MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              Isi knn
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Material" class="md-tabs__link md-tabs__link--active">
+        Material
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../extensions/admonition/" title="Extensions" class="md-tabs__link">
+          Extensions
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Material for MkDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Material" class="md-nav__link">
+      Material
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../specimen/" title="Specimen" class="md-nav__link">
+      Specimen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../compliance/" title="Compliance with GDPR" class="md-nav__link">
+      Compliance with GDPR
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release notes" class="md-nav__link">
+      Release notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../authors-notes/" title="Author's notes" class="md-nav__link">
+      Author's notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-k-nearest-neighbour" title="Apa itu K-Nearest Neighbour??" class="md-nav__link">
+    Apa itu K-Nearest Neighbour??
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kelebihan-dan-kekurangan-knn" title="Kelebihan dan Kekurangan KNN" class="md-nav__link">
+    Kelebihan dan Kekurangan KNN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contoh-perhitngan-knn-data-iris-dengan-bahasa-python" title="Contoh perhitngan KNN  data Iris dengan bahasa python" class="md-nav__link">
+    Contoh perhitngan KNN  data Iris dengan bahasa python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-libraries" title="Importing Libraries" class="md-nav__link">
+    Importing Libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-the-dataset" title="Importing the Dataset" class="md-nav__link">
+    Importing the Dataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-test-split" title="Train Test Split" class="md-nav__link">
+    Train Test Split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-dan-prediksi" title="Training dan Prediksi" class="md-nav__link">
+    Training dan Prediksi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accuration" title="Accuration" class="md-nav__link">
+    Accuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-error-rate-with-the-k-value" title="Comparing Error Rate with the K Value" class="md-nav__link">
+    Comparing Error Rate with the K Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Isi knn</h1>
+                
+                <h2 id="apa-itu-k-nearest-neighbour">Apa itu <em>K-Nearest Neighbour??</em><a class="headerlink" href="#apa-itu-k-nearest-neighbour" title="Permanent link">&para;</a></h2>
+<p>IAlgoritme <em>k-nearest neighbor</em> (k-NN atau KNN) adalah sebuah metode untuk melakukan <a href="https://id.wikipedia.org/wiki/Pengenalan_pola">klasifikasi</a> terhadap objek berdasarkan data pembelajaran yang jaraknya paling dekat dengan objek tersebut.</p>
+<p>Data pembelajaran diproyeksikan ke ruang berdimensi banyak, dimana masing-masing dimensi merepresentasikan fitur dari data. Ruang ini dibagi menjadi bagian-bagian berdasarkan klasifikasi data pembelajaran. Sebuah titik pada ruang ini ditandai kelas <em>c</em> jika kelas <em>c</em> merupakan klasifikasi yang paling banyak ditemui pada <em>k</em> buah tetangga terdekat titk tersebut. Dekat atau jauhnya tetangga biasanya dihitung berdasarkan jarak Euclidean.</p>
+<p>Pada fase pembelajaran, algoritme ini hanya melakukan penyimpanan vektor-vektor fitur dan klasifikasi dari data pembelajaran. Pada fase klasifikasi, fitur-fitur yang sama dihitung untuk data test (yang klasifikasinya tidak diketahui). Jarak dari vektor yang baru ini terhadap seluruh vektor data pembelajaran dihitung, dan sejumlah <em>k</em> buah yang paling dekat diambil. Titik yang baru klasifikasinya diprediksikan termasuk pada klasifikasi terbanyak dari titik-titik tersebut.</p>
+<p>Nilai <em>k</em> yang terbaik untuk algoritme ini tergantung pada data; secara umumnya, nilai <em>k</em> yang tinggi akan mengurangi efek <em>noise</em> pada klasifikasi, tetapi membuat batasan antara setiap klasifikasi menjadi lebih kabur. Nilai <em>k</em> yang bagus dapat dipilih dengan optimasi parameter, misalnya dengan menggunakan cross-validation. Kasus khusus di mana klasifikasi diprediksikan berdasarkan data pembelajaran yang paling dekat (dengan kata lain, <em>k</em> = 1) disebut algoritme <em>nearest neighbor</em>.</p>
+<p>Ketepatan algoritme k-NN ini sangat dipengaruhi oleh ada atau tidaknya fitur-fitur yang tidak relevan, atau jika bobot fitur tersebut tidak setara dengan relevansinya terhadap klasifikasi. Riset terhadap algoritme ini sebagian besar membahas bagaimana memilih dan memberi bobot terhadap fitur, agar performa klasifikasi menjadi lebih baik.</p>
+<p>Terdapat beberapa jenis algoritme pencarian tetangga terdekat, diantaranya:</p>
+<ul>
+<li>Linear scan</li>
+<li>Pohon kd</li>
+<li>Pohon Balltree</li>
+<li>Pohon metrik</li>
+<li>Locally-sensitive hashing (LSH)</li>
+</ul>
+<p>Algoritme k-NN ini memiliki konsistensi yang kuat. Ketika jumlah data mendekati tak hingga, algoritme ini menjamin <em>error rate</em> yang tidak lebih dari dua kali <em>Bayes error rate</em> (<em>error rate</em> minimum untuk distribusi data tertentu).</p>
+<p>sumber: <a href="https://id.wikipedia.org/wiki/KNN">https://id.wikipedia.org/wiki/KNN</a></p>
+<h2 id="kelebihan-dan-kekurangan-knn">Kelebihan dan Kekurangan <em>KNN</em><a class="headerlink" href="#kelebihan-dan-kekurangan-knn" title="Permanent link">&para;</a></h2>
+<p><strong>Kelebihan</strong></p>
+<ul>
+<li>
+<p>Sangat nonlinear</p>
+</li>
+<li>
+<p>kNN merupakan salah satu algoritma (model) pembelajaran mesin yang bersifat nonparametrik. Pembahasan mengenai <strong><em>model parametrik</em></strong> dan mode l***nonparametrik*** bisa menjadi artikel sendiri, namun secara singkat, definisi model nonparametrik adalah model yang tidak mengasumsikan apa-apa mengenai distribusi instance di dalam dataset. Model nonparametrik biasanya lebih sulit diinterpretasikan, namun salah satu kelebihannya adalah garis keputusan kelas yang dihasilkan model tersebut bisa jadi sangat fleksibel dan nonlinear.</p>
+<p><em>Perbandingan garis keputusan kelas kNN (garis putus-putus abu-abu) dengan model klasifikasi linear (garis lurus ungu)</em></p>
+<p>Pada ilustrasi di atas, kNN dapat melakukan klasifikasi dengan tepat karena garis keputusan kelasnya nonlinear. Bandingkan dengan model linear (<strong>e.g. logistic regression</strong>) yang tentunya akan menghasilkan banyak misklasifikasi jika garis keputusan kelas dalam <em>dataset</em> sebenarnya bersifat nonlinear.</p>
+</li>
+<li>
+<p>Mudah dipahami dan diimplementasikan</p>
+</li>
+<li>
+<p>Dari paparan yang diberikan dan penjelasan cara menghitung jarak dalam artikel ini, cukup jelas bahwa algoritma kNN mudah dipahami dan juga mudah dimplementasikan. Untuk mengklasifikasi instance x menggunakan kNN, kita cukup mendefinisikan fungsi untuk menghitung jarak antar-instance, menghitung jarak x dengan semua instance lainnya berdasarkan fungsi tersebut, dan menentukan kelas x sebagai kelas yang paling banyak muncul dalam k instance terdekat.</p>
+</li>
+</ul>
+<p><strong>Kekurangan</strong></p>
+<ul>
+<li>
+<p><strong>Perlu menunjukkan parameter K (jumlah tetangga terdekat)</strong></p>
+</li>
+<li>
+<p>Tidak menangani nilai hilang (missing value) secara implisit</p>
+<ul>
+<li>Jika terdapat nilai hilang pada satu atau lebih variabel dari suatu instance, perhitungan jarak instance tersebut dengan instance lainnya menjadi tidak terdefinisi. Bagaimana coba, menghitung jarak dalam ruang 3-dimensi jika salah satu dimensi hilang? Karenanya, sebelum menerapkan kNN kerap dilakukan <strong>imputasi</strong> untuk mengisi nilai-nilai hilang yang ada pada dataset. Contoh teknik imputasi yang paling umum adalah mengisi nilai hilang pada suatu variabel dengan nilai rata-rata variabel tersebut (mean imputation).</li>
+</ul>
+</li>
+<li>
+<p>Sensitif terhadap data pencilan (outlier)</p>
+<p>Seperti yang telah dijelaskan Ali pada artikel sebelumnya, kNN bisa jadi sangat fleksibel jika k kecil. Fleksibilitas ini mengakibatkan kNN cenderung sensitif terhadap data pencilan, khususnya pencilan yang terletak di “tengah-tengah” kelas yang berbeda. Lebih jelasnya, perhatikan ilustrasi di bawah. Pada gambar kiri, seluruh instance bisa diklasifikasikan dengan benar ke dalam kelas biru dan jingga. Tetapi, ketika ditambahkan instance biru di antara instance jingga, beberapa instance jingga menjadi salah terklasifikasi.Perlu dipilih k yang tepat untuk mengurangi dampak data pencilan dalam kNN.</p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\pencilan-outlier (1).jpg" /></p>
+<p>​                                                     <em>pencilan outlier.</em></p>
+</li>
+<li>
+<p>Rentan terhadap variabel yang non-informatif</p>
+<ul>
+<li>Meskipun kita telah menstandardisasi rentang variabel, kNN tetap tidak dapat mengetahui variabel mana yang signifikan dalam klasifikasi dan mana yang tidak. Lihat contoh berikut:</li>
+</ul>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\irrelevant-Variabel-non-informatif-1.jpg" /></p>
+<p>irrelevant variabel non-informatif</p>
+<p>Pada ilustrasi di atas, klasifikasi sebetulnya bisa dilakukan menggunakan variabel a saja (perhatikan garis vertikal yang memisahkan kedua kelas secara linear). Namun, kNN tidak dapat mengetahui bahwa variabel b tidak informatif. Alhasil, dua instance kelas biru terklasifikasi dengan salah, karena kedua instance tersebut dekat dengan instance kelas jingga dalam dimensi b. Andaikan kita hanya menggunakan variabel a dan membuang variabel b, semua instance akan terklasifikasi dengan tepat.Pemilihan variabel sebelum menerapkan kNN dapat membantu menangani permasalahan di atas. Selain itu, kita juga bisa memberi bobot pada variabel dalam perhitungan jarak antar-instance. Variabel yang kita tahu noninformatif kita beri bobot yang kecil.</p>
+</li>
+<li>
+<p>Rentan terhadap dimensionalitas yang tinggi</p>
+<ul>
+<li>Berbagai permasalahan yang timbul dari tingginya dimensionalitas (baca: banyaknya variabel) menimpa sebagian besar algoritma pembelajaran mesin, dan kNN adalah salah satu algoritma yang paling rentan terhadap tingginya dimensionalitas. Hal ini karena semakin banyak dimensi, ruang yang bisa ditempati instance semakin besar, sehingga semakin besar pula kemungkinan bahwa nearest neighbour dari suatu instance sebetulnya sama sekali tidak “near“.</li>
+</ul>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\dimensi-data-knn.jpg" /></p>
+<p>dimensi data knn</p>
+<p>Masalah tingginya dimensionalitas (terkadang) bisa diatasi dengan <strong>pemilihan variabel</strong> atau <strong>rekayasa fitur</strong>, misalnya dengan <strong>PCA</strong>.</p>
+</li>
+<li>
+<p>Rentan terhadap perbedaan rentang variabel</p>
+<ul>
+<li>Dalam perhitungan jarak antar-instance, kNN menganggap semua variabel setara atau sama penting (lihat bagian penjumlahan pada rumus perhitungan jarak di atas). Jika terdapat variabel p yang memiliki rentang jauh lebih besar dibanding variabel-variabel lainnya, maka perhitungan jarak akan didominasi oleh p. Misalkan ada dua variabel, a dan b, dengan rentang variabel a 0 sampai 1.000 dan rentang variabel b 0 sampai 10. Kuadrat selisih dua nilai variabel b tidak akan lebih dari 100, sedangkan untuk variabel a kuadrat selisihnya bisa mencapai 1.000.000. Hal ini bisa mengecoh kNN sehingga kNN menganggap a tidak membawa pengaruh dalam perhitungan jarak karena rentangnya sangat besar dibanding rentang b.Ilustrasinya diberikan di bawah ini. Manakah yang merupakan nearest neighbour dari instance x? Jika dilihat dari “kacamata” komputer, nearest neighbour x bukanlah y, melainkan z, Mengapa?</li>
+</ul>
+<p>Untuk mengatasi perbedaan rentang, biasanya dilakukan preproses berupa standardisasi rentang semua variabel sebelum menerapkan algoritma kNN. Contohnya yaitu melalui</p>
+<p>operasi centre-scale atau operasi min-max skala dataset knn</p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\skala-dataset-knn-1.jpg" /></p>
+</li>
+<li>
+<p>Nilai komputasi yang tinggi.</p>
+<ul>
+<li>Untuk mengklasifikasi sebuah instance x, kNN harus menghitung jarak antara x dengan semua instance lain dalam dataset yang kita miliki. Dengan kata lain, kompleksitas waktu klasifikasi kNN berbanding lurus dengan jumlah instance latih. Jika dataset yang kita miliki berukuran besar (terdiri dari banyak instance dan/atau banyak variabel), proses ini bisa jadi sangat lambat. Bayangkan, jika kita punya 10.000 instance dengan masing-masing 20 variabel dan kita ingin mengklasifikasi 100 instance baru (instance uji), maka total operasi yang harus dilakukan menjadi:**(100 instance uji x 10.000 instance latih) x 20 variabel/instance x 2 operasi/variabel = 40 juta operasi**Beberapa cara pengindexan (K-D tree) dapat digunakan untuk mereduksi biaya komputasi.</li>
+</ul>
+</li>
+</ul>
+<h2 id="contoh-perhitngan-knn-data-iris-dengan-bahasa-python">Contoh perhitngan KNN  data Iris dengan bahasa python<a class="headerlink" href="#contoh-perhitngan-knn-data-iris-dengan-bahasa-python" title="Permanent link">&para;</a></h2>
+<h4 id="importing-libraries">Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permanent link">&para;</a></h4>
+<pre class="codehilite"><code class="language-python">from sklearn import datasets
+import pandas as pd</code></pre>
+
+<h4 id="importing-the-dataset">Importing the Dataset<a class="headerlink" href="#importing-the-dataset" title="Permanent link">&para;</a></h4>
+<p>untuk menginportkan data ke dalam program:</p>
+<pre class="codehilite"><code class="language-python">from sklearn.linear_model import logistic_regression_path
+
+iris=datasets.load_iris()
+
+print(iris.data)
+print(iris.target)</code></pre>
+
+<h2 id="train-test-split">Train Test Split<a class="headerlink" href="#train-test-split" title="Permanent link">&para;</a></h2>
+<p>Untuk menghindari pemasangan berlebihan, kami akan membagi dataset kami menjadi pelatihan dan pemisahan uji, yang memberi kami ide yang lebih baik tentang bagaimana algoritma kami dilakukan selama fase pengujian. Dengan cara ini, algoritma kami diuji pada data yang tidak terlihat, seperti pada aplikasi produksi.</p>
+<p>Untuk membuat pelatihan dan menguji pemisahan, jalankan skrip berikut:</p>
+<pre class="codehilite"><code class="language-python">from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test=train_test_split(iris.data,iris.target,test_size=0.33)</code></pre>
+
+<h2 id="training-dan-prediksi">Training dan Prediksi<a class="headerlink" href="#training-dan-prediksi" title="Permanent link">&para;</a></h2>
+<p>Langkah pertama adalah mengimpor kelas KNeighborsClassifier dari perpustakaan sklearn.neighbors. Di baris kedua, kelas ini diinisialisasi dengan satu parameter, yaitu n_neigbours. Ini pada dasarnya adalah nilai untuk K. Tidak ada nilai ideal untuk K dan dipilih setelah pengujian dan evaluasi, namun untuk memulai, 5 tampaknya menjadi nilai yang paling umum digunakan untuk algoritma KNN.</p>
+<pre class="codehilite"><code class="language-python">from sklearn.neighbors import KNeighborsClassifier
+clf=KNeighborsClassifier(n_neighbors=3).fit(x_train,y_train)</code></pre>
+
+<h5 id="accuration">Accuration<a class="headerlink" href="#accuration" title="Permanent link">&para;</a></h5>
+<pre class="codehilite"><code class="language-python">from sklearn.metrics import accuracy_score
+print("accuracy is ")
+print(accuracy_score(y_test,clf.predict(x_test)))
+
+import matplotlib.pyplot as plt
+
+accuracy_values=[]</code></pre>
+
+<h4 id="comparing-error-rate-with-the-k-value">Comparing Error Rate with the K Value<a class="headerlink" href="#comparing-error-rate-with-the-k-value" title="Permanent link">&para;</a></h4>
+<p>Salah satu cara untuk membantu Anda menemukan nilai K terbaik adalah dengan memplot grafik nilai K dan tingkat kesalahan yang sesuai untuk dataset.</p>
+<p>Di bagian ini, kami akan memplot kesalahan rata-rata untuk nilai prediksi set tes untuk semua nilai K antara 1 dan 40.</p>
+<p>Untuk melakukannya, pertama-tama mari kita menghitung rata-rata kesalahan untuk semua nilai yang diprediksi di mana K berkisar dari 1 dan 40. Jalankan skrip berikut:</p>
+<pre class="codehilite"><code class="language-python">for x in range(1,x_train.shape[0]):
+    clf=KNeighborsClassifier(n_neighbors=x).fit(x_train,y_train)
+    accuracy=accuracy_score(y_test,clf.predict(x_test))
+    accuracy_values.append([x,accuracy])
+    pass</code></pre>
+
+<p>Skrip di atas mengeksekusi loop dari 1 hingga 40. Dalam setiap iterasi kesalahan rata-rata untuk nilai prediksi set tes dihitung dan hasilnya ditambahkan ke daftar kesalahan.</p>
+<p>Langkah selanjutnya adalah memplot nilai kesalahan terhadap nilai K. Jalankan skrip berikut untuk membuat plot:</p>
+<pre class="codehilite"><code class="language-python">import numpy as np
+accuracy_values=np.array(accuracy_values)
+
+plt.plot(accuracy_values[:,0],accuracy_values[:,1])
+plt.xlabel("K")
+plt.ylabel("accuracy")
+plt.show()
+</code></pre>
+
+<p>Output</p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\kkkkkkkkkkkkkkkkkkkkkk.JPG" /></p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\lll.JPG" /></p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\mmmm.JPG" /></p>
+<p>grafik </p>
+<p><img alt="" src="E:\UTM\Semester 4\Data Mining\datamining\mkdocs-material-master\docs\assets\images\ppppppp.JPG" /></p>
+<p>​                             <a href="https://stackabuse.com/k-nearest-neighbors-algorithm-in-python-and-scikit-learn/">https://stackabuse.com/k-nearest-neighbors-algorithm-in-python-and-scikit-learn/</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2019 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
